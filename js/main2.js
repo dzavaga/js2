@@ -59,11 +59,13 @@ let data = parseInt(mostFrequent);
 let newArr = [data];
 
 // видаляємо входження числа з поточного масиву
-for (let i = arr.length - 1; i >= 0; i--) {
+for (let i = 0; i < arr.length; i++) {
   if (arr[i] === data) {
     arr.splice(i, 1);
+    i--; // оскільки масив зменшився на один елемент, потрібно зменшити індекс
   }
 }
 
 console.log(newArr); // [5]
 console.log(arr); // [4, 2, 1, 6, 3, 2]
+

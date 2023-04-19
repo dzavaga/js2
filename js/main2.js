@@ -88,5 +88,35 @@ if (isNaN(g) || isNaN(f) || isNaN(l) || g <= 0 || f <= 0 || l <= 0) {
   }
 }
 /* 6 завдання */
+// перший спосіб за допомогою свіча
+/*const now = new Date();
+const hour = now.getHours();
+
+switch (true) {
+  case (hour >= 23 || hour < 5):
+    console.log("Доброї ночі");
+    break;
+  case (hour < 11):
+    console.log("Доброго ранку");
+    break;
+  case (hour < 17):
+    console.log("Доброго дня");
+    break;
+  default:
+    console.log("Доброго вечора");
+}*/
+// 2 спосіб за допомогою за допомогою if-else:
+const now = new Date();
+const hour = now.getHours();
+
+if (hour >= 23 || hour < 5) {
+  console.log("Доброї ночі");
+} else if (hour < 11) {
+  console.log("Доброго ранку");
+} else if (hour < 17) {
+  console.log("Доброго дня");
+} else {
+  console.log("Доброго вечора");
+}
 
 

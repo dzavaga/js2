@@ -68,4 +68,25 @@ for (let i = 0; i < arr.length; i++) {
 
 console.log(newArr); // [5]
 console.log(arr); // [4, 2, 1, 6, 3, 2]
+/*5 завдання*/
+let g = parseFloat(prompt("Enter the length of the first side of the triangle:"));
+let f = parseFloat(prompt("Enter the length of the second side of the triangle:"));
+let l = parseFloat(prompt("Enter the length of the third side of the triangle:"));
+
+if (isNaN(g) || isNaN(f) || isNaN(l) || g <= 0 || f <= 0 || l <= 0) {
+  console.log("Incorrect data");
+} else {
+  let p = (g + f + l) / 2;
+  let triangleArea = Math.sqrt(p * (p - g) * (p - f) * (p - l)).toFixed(3);
+
+  console.log("Triangle area: " + triangleArea);
+
+  if (g * g + f * f === l * l || g * g + l * l === f * f || f * f + l * l === g * g) {
+    console.log("The triangle is a right triangle");
+  } else {
+    console.log("The triangle is not a right triangle");
+  }
+}
+/* 6 завдання */
+
 
